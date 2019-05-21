@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import withLayout from '../Components/withLayout'
+import Blog from '../Components/Blog'
 
 import Translate from '../translate-fr'
 
@@ -8,10 +9,16 @@ import './styles.scss'
 
 function Home() {
   return (
-    <div className="title">
-      <h1>{Translate.home.h1}</h1>
-      <h2>{Translate.home.h2}</h2>
-    </div>
+    <Fragment>
+      <section className="home">
+        <div className="title">
+          <h1 className="title_h1">{Translate.home.h1}</h1>
+          <h2 className="title_h2">{Translate.home.h2}</h2>
+        </div>
+      </section>
+
+      <Blog />
+    </Fragment>
   )
 }
 

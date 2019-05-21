@@ -1,0 +1,18 @@
+.blog {
+  display: block;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.blog-article {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.article-detail {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+}
