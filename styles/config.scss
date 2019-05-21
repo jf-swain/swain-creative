@@ -1,0 +1,27 @@
+@import '~sass-library/utils/font-face.mixin';
+
+$theme-font: (
+  'light': (
+    name: 'lato-light',
+    fallback: 'sans-serif',
+    download: (
+      link: '/static/fonts/Lato/Lato-Light/lato-light',
+    )
+  ),
+  'default': (
+    name: 'lato-regular',
+    fallback: 'sans-serif',
+    download: (
+      link: '/static/fonts/Lato/Lato-Regular/lato-regular',
+    )
+  ),
+  'bold': (
+    name: 'lato-bold',
+    fallback: 'sans-serif',
+    download: (
+      link: '/static/fonts/Lato/Lato-Bold/lato-bold',
+    )
+  )
+);
+
+@include font-face($theme-font);

@@ -1,0 +1,37 @@
+@import '~sass-library/import';
+@import '../styles/config';
+$theme: test;
+$font-size: 50px;
+
+.title {
+  border: 3px solid #000;
+  height: 116px;
+  left: 50%;
+  position: relative;
+  text-align: center;
+  top: 27vh;
+  transform: translate(-50%, 0);
+  width: 398px;
+}
+
+h1 {
+  font-family: font-name('bold', $theme-font);
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  background: white;
+  bottom: -10px;
+  font-family: font-name('default', $theme-font);
+  font-size: 20px;
+  height: 20px;
+  left: 50%;
+  line-height: 20px;
+  margin: 0;
+  padding: 0 16.5px;
+  position: absolute;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+}
