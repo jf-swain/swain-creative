@@ -5,14 +5,14 @@ import './styles.scss'
 
 class ArticleSummary extends PureComponent {
   render() {
-    const { articleSumContent: { title, content } } = this.props
+    const { articleSumContent: { title, contentSummary } } = this.props
 
     return (
       <article className="article-content">
         <header className="article-content__header">{title}</header>
 
         <p className="article-content__content">
-          {content}
+          {contentSummary}
         </p>
       </article>
     )
@@ -22,7 +22,7 @@ class ArticleSummary extends PureComponent {
 ArticleSummary.propTypes = {
   articleSumContent: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
+    contentSummary: PropTypes.string.isRequired,
   }).isRequired,
 }
 

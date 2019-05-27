@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 const MetaTags = ({ title, description }) => (
   <Head>
+    <html lang="fr" />
     <title>{title}</title>
 
     <link

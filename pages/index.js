@@ -11,10 +11,11 @@ function Home() {
   return (
     <Fragment>
       <section className="home">
-        <div className="title">
+        <header className="title">
           <h1 className="title_h1">{Translate.home.h1}</h1>
+
           <h2 className="title_h2">{Translate.home.h2}</h2>
-        </div>
+        </header>
       </section>
 
       <Blog />

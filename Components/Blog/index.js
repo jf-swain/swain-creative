@@ -8,27 +8,35 @@ import './styles.scss'
 
 class Blog extends PureComponent {
   render() {
+    const { blog: { articles } } = Translate
+
     return (
       <section className="blog">
-        <h2>{Translate.blogSummary.sectionTitle}</h2>
+        <h2>{Translate.blog.sectionTitle}</h2>
 
-        <article className="blog-article">
-          <div className="article-detail">
-            <span>
-              <Tag tagName={Translate.blogSummary.articleFirst.tag} />
-            </span>
+        {
+          articles.map(article => (
+            <article className="blog-article">
+              <div className="article-detail">
+                <span>
+                  <Tag
+                    tagName={article.tag}
+                  />
+                </span>
 
-            <span className="article-detail__date">
-              {Translate.blogSummary.articleFirst.date}
-            </span>
-          </div>
+                <span className="article-detail__date">
+                  {article.date}
+                </span>
+              </div>
 
-          <div className="_article-content">
-            <ArticleSummary
-              articleSumContent={Translate.blogSummary.articleFirst}
-            />
-          </div>
-        </article>
+              <div className="_article-content">
+                <ArticleSummary
+                  articleSumContent={article}
+                />
+              </div>
+            </article>
+          ))
+        }
       </section>
     )
   }

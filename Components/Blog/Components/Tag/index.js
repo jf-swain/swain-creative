@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import './styles.scss'
 
 const Tag = ({ tagName }) => (
-  <div className="tag">
-    {tagName}
-  </div>
+  <Fragment>
+    {
+      tagName.map(tag => (
+        <span className="tag">
+          {tag}
+        </span>
+      ))
+    }
+  </Fragment>
 )
 
 Tag.propTypes = {
-  tagName: PropTypes.string.isRequired,
+  tagName: PropTypes.array.isRequired,
 }
 
 export default Tag
