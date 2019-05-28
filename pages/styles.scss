@@ -1,17 +1,19 @@
 @import '~sass-library/import';
 @import '../styles/config';
+
 $theme: test;
 $font-size: 50px;
 
 .home {
-  height: 100vh;
   display: block;
+  height: 100vh;
 }
 
 .title {
   border: 3px solid #000;
   height: 116px;
   left: 50%;
+  line-height: 116px;
   position: relative;
   text-align: center;
   top: 27vh;
@@ -27,7 +29,7 @@ $font-size: 50px;
 }
 
 .title_h2 {
-  background: white;
+  background: #fff;
   bottom: -10px;
   font-family: font-name('default', $theme-font);
   font-size: 20px;
