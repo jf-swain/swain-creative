@@ -16,7 +16,7 @@ class Blog extends PureComponent {
 
         {
           articles.map(article => (
-            <article className="blog-article">
+            <article className="blog-article" key="article.title">
               <div className="article-detail">
                 <span>
                   <Tag

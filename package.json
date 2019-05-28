@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next",
-    "test": "NODE_ENV=test jest"
+    "lint:css": "stylelint **/*.scss **/**/*.scss --fix"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
@@ -31,6 +31,10 @@
     "i": "^0.3.6",
     "jest": "^24.8.0",
     "npm": "^6.9.0",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "sass-lint": "^1.13.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0"
   }
 }
