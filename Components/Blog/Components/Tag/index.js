@@ -7,7 +7,7 @@ const Tag = ({ tagName }) => (
   <Fragment>
     {
       tagName.map(tag => (
-        <span className="tag">
+        <span className="tag" key="tag">
           {tag}
         </span>
       ))

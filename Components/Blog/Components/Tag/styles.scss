@@ -1,12 +1,9 @@
-@import '~sass-library/import';
-@import '../../../../styles/config';
-
 .tag {
   background: #000;
-  color: #FFF;
+  color: #fff;
   display: inline-block;
   font-family: font-name('default', $theme-font);
-  font-size: 20px;
+  font-size: rem(20);
   padding: 7px 22px;
   text-transform: capitalize;
 }
