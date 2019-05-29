@@ -1,0 +1,90 @@
+/// param animation
+$animation-duration: .8s;
+$animation-delai: $animation-duration;
+
+.svg-border {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  &__line {
+    stroke: #000;
+    stroke-width: 5px;
+
+    &--top-left {
+      animation: anime-top-left ease-out $animation-duration forwards .1s;
+      opacity: 0;
+    }
+
+    &--top-right {
+      animation: anime-top-right ease-out $animation-duration forwards .1s;
+      opacity: 0;
+    }
+
+    &--left {
+      animation: anime-side ease-out $animation-duration forwards $animation-delai;
+      opacity: 0;
+    }
+
+    &--right {
+      animation: anime-side ease-out $animation-duration forwards $animation-delai;
+      opacity: 0;
+    }
+
+    &--bottom-left {
+      animation: anime-bottom-left ease-out $animation-duration forwards $animation-delai*2;
+      opacity: 0;
+    }
+
+    &--bottom-right {
+      animation: anime-bottom-right ease-out $animation-duration forwards $animation-delai*2;
+      opacity: 0;
+    }
+  }
+}
+
+.home .title_h2 {
+  animation: color-change ease-out .2s forwards $animation-delai*2;
+  color: #fff;
+}
+
+@keyframes color-change {
+
+  0% {
+    color: #fff;
+  }
+
+  100% {
+    color: #000;
+  }
+}
+
+/// animate function
+/// @param $startX [number] in px
+/// @param $startY [number] in px
+/// @param $animeName [string] animation name
+@mixin animate($startX, $startY, $animeName) {
+  @keyframes #{$animeName} {
+
+    0% {
+      opacity: 0;
+      transform: translate($startX, $startY);
+    }
+
+    1% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@include animate(109px, 0, anime-top-left);
+@include animate(-109px, 0, anime-top-right);
+@include animate(0, -116px, anime-side);
+@include animate(-199px, 0, anime-bottom-left);
+@include animate(199px, 0, anime-bottom-right);
